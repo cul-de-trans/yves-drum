@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <title>Yves' Drums</title>
+  <meta name="theme-color" content="#14121f">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Yves' Drums">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="bar">
+    <div class="seg" id="mode">
+      <button data-mode="free" class="on">Free Play</button>
+      <button data-mode="follow">Follow Me</button>
+    </div>
+
+    <div class="follow-only">
+      <select id="song" aria-label="Rhythm"></select>
+
+      <div class="seg" id="level">
+        <button data-level="1" class="on" title="Wait for me">⭐</button>
+        <button data-level="2" title="Slow">⭐⭐</button>
+        <button data-level="3" title="Normal">⭐⭐⭐</button>
+      </div>
+
+      <div class="tempo timed-only">
+        <button id="slower" aria-label="Slower">−</button>
+        <span id="bpm">65</span>
+        <button id="faster" aria-label="Faster">+</button>
+      </div>
+
+      <button id="guide" class="toggle timed-only" aria-pressed="false" title="Play the beat for him">🔈 Guide</button>
+
+      <button id="play" class="play">▶ Start</button>
+    </div>
+  </header>
+
+  <main class="room">
+    <div class="stage" id="stage">
+      <div class="center">
+        <div id="count" class="count"></div>
+        <div id="feedback" class="feedback"></div>
+        <div id="score" class="score follow-only"></div>
+      </div>
+    </div>
+  </main>
+
+  <div class="rotate-hint">Turn the iPad sideways for a bigger drum kit ↻</div>
+
+  <div class="overlay" id="start">
+    <div class="start-card">
+      <div class="start-drum">🥁</div>
+      <h1>Yves' Drums</h1>
+      <p id="start-msg">Loading drums…</p>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
